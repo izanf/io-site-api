@@ -14,10 +14,23 @@ export interface SpeakerSpeaker extends Schema.Component {
   };
 }
 
+export interface SponsorSponsor extends Schema.Component {
+  collectionName: 'components_sponsor_sponsors';
+  info: {
+    displayName: 'Sponsor';
+  };
+  attributes: {
+    imageUrl: Attribute.String;
+    title: Attribute.String;
+    type: Attribute.Enumeration<['gold', 'silver', 'bronze', 'helper']>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'speaker.speaker': SpeakerSpeaker;
+      'sponsor.sponsor': SponsorSponsor;
     }
   }
 }
