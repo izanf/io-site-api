@@ -8,7 +8,7 @@ export interface SpeakerSpeaker extends Schema.Component {
   };
   attributes: {
     name: Attribute.String;
-    photo: Attribute.Media;
+    image: Attribute.Media;
     title: Attribute.String;
     description: Attribute.String;
   };
@@ -18,11 +18,12 @@ export interface SponsorSponsor extends Schema.Component {
   collectionName: 'components_sponsor_sponsors';
   info: {
     displayName: 'Sponsor';
+    description: '';
   };
   attributes: {
-    imageUrl: Attribute.String;
     title: Attribute.String;
     type: Attribute.Enumeration<['gold', 'silver', 'bronze', 'helper']>;
+    image: Attribute.Media;
   };
 }
 

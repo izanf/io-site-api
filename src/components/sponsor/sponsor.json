@@ -1,13 +1,11 @@
 {
   "collectionName": "components_sponsor_sponsors",
   "info": {
-    "displayName": "Sponsor"
+    "displayName": "Sponsor",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "imageUrl": {
-      "type": "string"
-    },
     "title": {
       "type": "string"
     },
@@ -19,6 +17,16 @@
         "bronze",
         "helper"
       ]
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
