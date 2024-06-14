@@ -916,6 +916,37 @@ export interface ApiSpeakerSpeaker extends Schema.CollectionType {
   };
 }
 
+export interface ApiSponsorSponsor extends Schema.CollectionType {
+  collectionName: 'sponsors';
+  info: {
+    singularName: 'sponsor';
+    pluralName: 'sponsors';
+    displayName: 'Sponsor';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    items: Attribute.Component<'sponsor.sponsor', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sponsor.sponsor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sponsor.sponsor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -938,6 +969,7 @@ declare module '@strapi/types' {
       'api::explore.explore': ApiExploreExplore;
       'api::location.location': ApiLocationLocation;
       'api::speaker.speaker': ApiSpeakerSpeaker;
+      'api::sponsor.sponsor': ApiSponsorSponsor;
     }
   }
 }
