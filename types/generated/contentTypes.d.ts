@@ -820,7 +820,7 @@ export interface ApiAboutAbout extends Schema.CollectionType {
   };
 }
 
-export interface ApiExploreExplore extends Schema.CollectionType {
+export interface ApiExploreExplore extends Schema.SingleType {
   collectionName: 'explores';
   info: {
     singularName: 'explore';
@@ -831,10 +831,10 @@ export interface ApiExploreExplore extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    date: Attribute.DateTime;
     title: Attribute.String;
-    description: Attribute.Text;
+    description: Attribute.String;
     registrationUrl: Attribute.String;
+    eventTime: Attribute.DateTime;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

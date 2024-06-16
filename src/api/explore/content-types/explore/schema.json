@@ -1,5 +1,5 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "explores",
   "info": {
     "singularName": "explore",
@@ -11,17 +11,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "date": {
-      "type": "datetime"
-    },
     "title": {
       "type": "string"
     },
     "description": {
-      "type": "text"
+      "type": "string"
     },
     "registrationUrl": {
       "type": "string"
+    },
+    "eventTime": {
+      "type": "datetime"
     }
   }
 }
