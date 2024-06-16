@@ -1,5 +1,5 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "locations",
   "info": {
     "singularName": "location",
@@ -17,7 +17,7 @@
     "address": {
       "type": "string"
     },
-    "url": {
+    "locationUrl": {
       "type": "string"
     }
   }

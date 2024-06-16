@@ -788,19 +788,18 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiAboutAbout extends Schema.CollectionType {
+export interface ApiAboutAbout extends Schema.SingleType {
   collectionName: 'abouts';
   info: {
     singularName: 'about';
     pluralName: 'abouts';
     displayName: 'About';
-    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    content: Attribute.Text;
+    content: Attribute.String;
     title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -853,7 +852,7 @@ export interface ApiExploreExplore extends Schema.SingleType {
   };
 }
 
-export interface ApiLocationLocation extends Schema.CollectionType {
+export interface ApiLocationLocation extends Schema.SingleType {
   collectionName: 'locations';
   info: {
     singularName: 'location';
@@ -866,7 +865,7 @@ export interface ApiLocationLocation extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     address: Attribute.String;
-    url: Attribute.String;
+    locationUrl: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
