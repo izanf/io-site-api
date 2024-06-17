@@ -11,6 +11,9 @@ export interface SpeakerSpeaker extends Schema.Component {
     image: Attribute.Media;
     title: Attribute.String;
     description: Attribute.String;
+    linkedinUrl: Attribute.String;
+    gdgUrl: Attribute.String;
+    githubUrl: Attribute.String;
   };
 }
 

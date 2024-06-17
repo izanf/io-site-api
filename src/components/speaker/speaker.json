@@ -25,6 +25,15 @@
     },
     "description": {
       "type": "string"
+    },
+    "linkedinUrl": {
+      "type": "string"
+    },
+    "gdgUrl": {
+      "type": "string"
+    },
+    "githubUrl": {
+      "type": "string"
     }
   }
 }
