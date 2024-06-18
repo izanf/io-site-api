@@ -897,7 +897,13 @@ export interface ApiSpeakerSpeaker extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    items: Attribute.Component<'speaker.speaker'>;
+    name: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.Text;
+    image: Attribute.Media;
+    githubUrl: Attribute.String;
+    linkedinUrl: Attribute.String;
+    gdgUrl: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -928,7 +934,9 @@ export interface ApiSponsorSponsor extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    items: Attribute.Component<'sponsor.sponsor', true>;
+    title: Attribute.String;
+    type: Attribute.Enumeration<['gold', 'silver', 'bronze', 'helper']>;
+    image: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -12,10 +12,27 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "items": {
-      "type": "component",
-      "repeatable": true,
-      "component": "sponsor.sponsor"
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "gold",
+        "silver",
+        "bronze",
+        "helper"
+      ]
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -12,10 +12,33 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "items": {
-      "type": "component",
-      "repeatable": false,
-      "component": "speaker.speaker"
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "githubUrl": {
+      "type": "string"
+    },
+    "linkedinUrl": {
+      "type": "string"
+    },
+    "gdgUrl": {
+      "type": "string"
     }
   }
 }
