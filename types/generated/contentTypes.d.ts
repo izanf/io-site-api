@@ -897,7 +897,7 @@ export interface ApiSpeakerSpeaker extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    items: Attribute.Component<'speaker.speaker', true>;
+    items: Attribute.Component<'speaker.speaker'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -14,7 +14,7 @@
   "attributes": {
     "items": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "speaker.speaker"
     }
   }
